@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-example
+  labels:
+    app: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80
+    volumeMounts:
+      - mountPath: /myconfig
+        name: config-volume
+  volumes:
+  - name: config-volume
+    configMap:
+      name: literal-example      
