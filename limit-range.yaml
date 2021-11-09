@@ -1,0 +1,19 @@
+# limitRanges are assinged to a specific namespace. Once deployed, 
+# any resources that are deployed into the resources requested 
+# are compared with the limits defined in the limitRange for that
+# namespace. If the requested resources are higher than allowed by
+# the limitRange, the resource scheduling will fail.
+
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: low-resource-range
+spec:
+  limits:
+  - default:
+      cpu: 1
+      memory: 500Mi
+    defaultRequest:
+      cpu: 0.5
+      memory: 100Mi
+    type: Container
