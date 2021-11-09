@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  MYSQL_HOST: 127.0.0.1
+  MYSQL_PASSWORD: ReallyBadPassword
+  MYSQL_PORT: "3306"
+  MYSQL_USER: jon
+kind: ConfigMap
+metadata:
+  name: literal-example
+  namespace: default
