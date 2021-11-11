@@ -1,0 +1,8 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: windows-instances
+  namespace: openshift-windows-machine-config-operator
+data:
+  192.168.123.60: |- 
+    username=Administrator 
